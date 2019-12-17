@@ -97,6 +97,11 @@ a:hover {
     max-width: 60rem
 } 
 
+img {
+    width:auto;
+    max-height: 40rem;
+}
+
 .container, .container-fluid {
     margin: 0 auto;
     padding: 0 1rem
