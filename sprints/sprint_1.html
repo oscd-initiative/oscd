@@ -5,48 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>OSCD</title>
-    <link rel="stylesheet" href="./hack.css">
-    <link rel="apple-touch-icon" sizes="57x57" href="./img/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./img/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./img/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./img/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./img/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./img/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./img/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./img/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./img/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
-    <link rel="manifest" href="./img/manifest.json">
+    <link rel="stylesheet" href="../hack.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="./img/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="../img/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
   </head>
   <body class="hack">
     <div class="main container">
       <br>
-      <center> <a href="index.html">EN</a> | <a href="index_ru.html">RU</a> </center>
+      <center> <a href="../index.html">Back</a> </center>
       <br>
-      <img src="./img/oscd_logo.jpg" alt="OSCD" class="center">
-      <h1>Open Security Collaborative Development</h1>
-      Open international initiative of computer security specialists aiming to solve common problems, share knowledge, and improve general security posture.
+      <center> <a href="sprint_1.html">EN</a> | <a href="sprint_1_ru.html">RU</a> </center>
+      <br>
+      <h1>OSCD Sprint #1: Threat Detection</h1>
+      There is the <a href="https://github.com/Neo23x0/sigma/">Sigma Project</a> — Generic Signature Format for SIEM Systems. 
+      It has a converter that generates searches/queries for different SIEM systems and a set of Detection Rules. 
       <br><br>
-      <h2>Why</h2>
-      Some problems could not be solved internally by one team or an organization, but together, as a community, we can achieve a lot.
+      With time, Sigma project ruleset has become the biggest and the most mature community-driven Detection Rules set.
       <br><br>
-      <h2>When</h2>
-      The collaborative development is organized as two weeks-long sprints. The next sprint is planned for Spring 2020. Details will follow soon.
+      There are some gaps and issues in it, at the same time there are plenty of decent analytics published that haven't been added to Sigma Project repository, so we would like to work it out.
       <br><br>
-      <h2>Where</h2>
-      Most of the participants are joining remotely. Information about the possibility of joining in person will be provided together with details about the next sprint.
+      <h2>Goals</h2>
+      - Improve <a href="https://attack.mitre.org">MITRE ATT&CK</a> coverage of open source Sigma rules<br>
+      - Push forward the culture of Sigma format use
       <br><br>
-      <h2>Sprints</h2>
-      - <a href="./sprints/sprint_1.html">OSCD Sprint #1: Threat Detection, Fall 2019</a><br>
-      - <a href="./sprints/sprint_2.html">OSCD Sprint #2: Spring 2020</a>
+      <h2>The plan</h2>
+      1. Two weeks-long sprint starts October 21, 2019<br>
+      2. Participants pick up tasks from the <a href="https://docs.google.com/document/d/1aAIZr4TKwF94zzVi44tAPs-HLJRg1Nz62GZr4oIXoEA">backlog</a> or contribute other analytics<br>
+      3. Development and testing will be done using community or personal laboratory<br>
+      4. Participants use special <a href="https://docs.google.com/document/d/1EGKfXwlea-Nf1TwqZH09dqPjerDbo6PFyt9DpX0daRk">guideline</a> which will help to get familiar with the workflow<br>
+      5. Results will be collected, reviewed and pushed to Sigma Project repository on GitHub
       <br><br>
-      <h2>Previous sprint participants</h2>
+      <h2>Results</h2>
+      - 144 new Sigma rules added<br>
+      - 19 existing rules improved<br>
+      - two existing rules deprecated<br><br>
+      Listing of the rules is available in the description of the <a href="https://github.com/Neo23x0/sigma/pull/554">Pull Request</a> to Sigma repo.<br>
+      Description of the process and lessons learned will be published in an article on Medium soon.
+      <br><br>
+      <h2>Participants</h2>
       - Thomas Patzke, <a href="https://twitter.com/blubbfiction">@blubbfiction</a> (<a href="https://github.com/Neo23x0/sigma/">Sigma Project</a>) 🇩🇪 <br>
       - Teymur Kheirkhabarov, <a href="https://twitter.com/HeirhabarovT">@HeirhabarovT</a> (<a href="https://www.bi.zone">BI.ZONE SOC</a>) 🇷🇺 <br>
       - Daniel Bohannon, <a href="https://twitter.com/danielhbohannon">@danielhbohannon</a> (<a href="https://www.fireeye.com/services.html">FireEye</a>) 🇺🇸 <br>
@@ -79,18 +90,11 @@
       - Daniil Yugoslavskiy, <a href="https://twitter.com/yugoslavskiy">@yugoslavskiy</a> (<a href="https://cindicator.com">Cindicator SOC</a>) 🇷🇺
       <br><br>
       <h2>Thanks to</h2>
-      - <a href="https://2019.hack.lu">hack.lu</a> organizers for a place on conference premises during the Sprint #1<br>
-      - Andrey <a href="https://www.behance.net/PolarLetters">PolarLetters</a> for the logo
+      - <a href="https://2019.hack.lu">hack.lu</a> organizers for a place on conference premises<br>
       <br><br>
-      <h2>Contacts</h2>
-      - <a href="https://twitter.com/oscd_initiative">Twitter</a><br>
-      - <a href="https://join.slack.com/t/oscd/shared_invite/enQtODc1NjA0MzU0NTQ4LWMyMzdkNTJkZDUzZWZkNDk5M2JlNGY0MWRkMDlmMjg3NjBmZjBiMTg0MGRmMzA1YzI4ZWM3ZjZlMGQ3NWMwYzM">Slack</a> 
-      <br><br>
-      <h2>Organizers</h2>
-      We are a community of enthusiasts. Although it's not forbidden for Participants to mention a company they are currently working for, this initiative is not affiliated with any of them or any other commercial organizations.<br>
-      We do not mention any names in this section to not produce the feeling that somebody "owns" this initiative. All credit goes to the Participants.
-      <br><br>
-      <center> <a href="index.html">EN</a> | <a href="index_ru.html">RU</a> </center>
+      <center> <a href="sprint_1.html">EN</a> | <a href="sprint_1_ru.html">RU</a> </center>
+      <br>
+      <center> <a href="../index.html">Back</a> </center>
       <br>
   </div>
  </body>
