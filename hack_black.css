@@ -102,6 +102,12 @@ img {
     object-fit: cover;
 }
 
+img.animated-gif{
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
 .cover {object-fit: cover;}
 
 .container, .container-fluid {
