@@ -99,7 +99,10 @@ a:hover {
 img {
     width:auto;
     max-height: 40rem;
+    object-fit: cover;
 }
+
+.cover {object-fit: cover;}
 
 .container, .container-fluid {
     margin: 0 auto;
