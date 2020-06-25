@@ -105,7 +105,8 @@ img {
 img.animated-gif{
   width: auto;
   height: auto;
-  object-fit: cover;
+/*  width: 100vmin;
+  height: 100vmin;*/
 }
 
 .cover {object-fit: cover;}
