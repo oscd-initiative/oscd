@@ -98,15 +98,14 @@ a:hover {
 
 img {
     width:auto;
-    max-height: 40rem;
-    object-fit: cover;
+    height:auto;
+    max-width: 40rem;
 }
 
 img.animated-gif{
-/*  width: auto;
-  height: auto;*/
-  width: 100vmin;
-  height: 100vmin;
+    width:auto;
+    height:auto;
+    max-width: 40rem;
 }
 
 .cover {object-fit: cover;}
