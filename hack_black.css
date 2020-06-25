@@ -103,10 +103,10 @@ img {
 }
 
 img.animated-gif{
-  width: auto;
-  height: auto;
-/*  width: 100vmin;
-  height: 100vmin;*/
+/*  width: auto;
+  height: auto;*/
+  width: 100vmin;
+  height: 100vmin;
 }
 
 .cover {object-fit: cover;}
