@@ -87,17 +87,16 @@ a:hover {
     left: 0
 } 
 
-table {
+.hack table {
   width:100%
-
 }
 
-td {
+.hack td {
   padding: 10px;
   border: 1px solid #78bec7;
 }
 
-th {
+.hack th {
   border: 1px solid #78bec7;
   padding: 10px;
   text-align: left;
@@ -112,7 +111,7 @@ th {
     max-width: 60rem
 } 
 
-img {
+.hack img {
     width:auto;
     height:auto;
     max-width: 30rem;
