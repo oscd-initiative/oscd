@@ -87,6 +87,22 @@ a:hover {
     left: 0
 } 
 
+table {
+  width:100%
+
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #78bec7;
+}
+
+th {
+  border: 1px solid #78bec7;
+  padding: 10px;
+  text-align: left;
+}
+
 .hack ul > li:after {
     content: "-"
 } 
