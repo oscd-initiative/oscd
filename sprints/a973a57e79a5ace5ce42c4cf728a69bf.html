@@ -37,7 +37,6 @@
       </div>
       <center> <p style="font-size: 16px;">OSCD Sprint #2: Simulation, Detection & Response</p> </center>
       <br>
-      Hello, Friend. <br>
       It's been a while since we've been working on <a href="sprint_1.html" target="_blank">the First OSCD sprint</a>, dedicated to Threat Detection. This time we will focus on multiple areas of practical CyberSecurity. You can find a detailed backlog <a href="sprint_2_backlog.html" target="_blank">here</a>, the high-level description is following.
 
       <h1>Adversary Simulation</h1>
@@ -45,22 +44,27 @@
       <h1>Threat Detection</h1>
       some text.
       <h1>Incident Response</h1>
-      There is <a href="https://github.com/Neo23x0/sigma/" target="_blank">TheHive Project</a> — a scalable, open source and free Security Incident Response Platform, tightly integrated with <a href="https://www.misp-project.org/" target="_blank">Malware Information Sharing Platform (MISP)</a>, designed to make life easier for SOCs, CSIRTs, CERTs and any information security practitioner dealing with security incidents that need to be investigated and acted upon swiftly.
+      There is the <a href="https://thehive-project.org/#section_thehive" target="_blank">TheHive</a> — the most powerful open source and free Security Incident Response Platform.
+      It has a module called <a href="https://thehive-project.org/#section_cortex" target="_blank">Cortex</a> — Observable Analysis and Active Response Engine. 
+      It operates by two key entities, called <b>Analyzers</b> and <b>Responders</b> — simple Python scripts that utilize API to communicate with 3rd party systems and execute some actions:
       <br><br>
-
-      Some text here.
-
+      - <b>Analyzers</b> provide the ability to analyze observables (i.e. IP address, Domain name, File hash etc) via CTI platforms (i.e. <a href="https://www.misp-project.org/" target="_blank">MISP</a>), analysis systems (i.e. <a href="https://cuckoosandbox.org/" target="_blank">Cuckoo Sandbox</a>) and lookup services (i.e. <a href="https://www.virustotal.com/gui/home/upload" target="_blank">VirusTotal</a>)
       <br><br>
-      Here is the actual TheHive Analyzers and Responders coverage of <a href="https://atc-project.github.io/atc-react/" target="_blank">RE&CT</a> framework:
+      - <b>Responders</b> provide the ability to execute some Response Actions (i.e. block domain name on a DNS server, block IP address on a firewall etc) by executing these actions with Python scripts
+      <br><br>
+      With time, the community (as well as authors of the project) developed about 150 Analyzers, which provide the ability to automatically analyze most of the observables types by most of the existing platforms, systems, and services.
+      <br><br>
+      For some reason, it didn't happen the same way with the Responders — there are only 20 of them, and they are far away from covering most common cases with common systems.
+      <br><br>
+      Here is the actual TheHive Analyzers and Responders coverage of the <a href="https://atc-project.github.io/atc-react/" target="_blank">RE&CT</a> framework. Analyzers are belonged to the <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0002/" target="_blank">Identification</a> stage, while Responders are mostly to the <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0003/" target="_blank">Containment</a>, <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0004/" target="_blank">Eradication</a>, and <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0005/" target="_blank">Recovery</a> stages:
       <br><br>
       <details>
         <summary>Current coverage is green, possible is yellow (click to expand)</summary>
         <pre><iframe src="https://oscd-initiative.github.io/react-navigator/" width="700" height="500"></iframe></pre>
       </details>
       <br>
-
-      The coverage was built upon <a href="https://github.com/oscd-initiative/Cortex-Analyzers" target="_blank">our fork</a> of repo with TheHive Analyzers and Responders, that we tagged with RE&CT IDs.
-     
+      <!-- The coverage was built upon <a href="https://github.com/oscd-initiative/Cortex-Analyzers" target="_blank">our fork</a> of repo with TheHive Analyzers and Responders, that we tagged with RE&CT IDs. -->
+      That's why we've decided to focus on the TheHive Responders development this time.
       <h1>Goals</h1>
 
       - Improve <a href="https://attack.mitre.org" target="_blank">MITRE ATT&CK</a> coverage of open source Sigma rules and Atomic Red Team tests<br>
