@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OSCD: Sprint #2</title>
+    <link rel="stylesheet" href="../hack_black.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/manifest.json">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="../img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#000000">
+  </head>
+  <body class="hack">
+    <div class="main container">
+      <br>
+      <center> <a href="../index_ru.html">На главную</a> </center>
+      <br>
+      <center> <a href="index.html">EN</a> | <a href="index_ru.html">RU</a> </center>
+      <div>
+      <p align="center">
+        <img src="../img/oscd_logo_v2.gif" alt="OSCD">
+      </p>
+      </div>
+      <center> <p style="font-size: 16px;">OSCD Sprint #2: Simulation, Detection & Response</p> </center>
+      <br>
+      Прошло много времени с <a href="sprint_1_ru.html" target="_blank">первого спринта OSCD</a>, посвященного Обнаружению Угроз. На этот раз мы сосредоточимся на нескольких областях практической кибербезопасности. Подробный список задач можно найти <a href="sprint_2_backlog_ru.html" target="_blank">здесь</a>. Ниже приведено общее описание спринта и направлений.
+      <br><br>
+      <h2>Цели</h2>
+
+      - Улучшить покрытие фреймворка <a href="https://attack.mitre.org" target="_blank">MITRE ATT&CK</a> правилами проекта <a href="https://github.com/Neo23x0/sigma/" target="_blank">Sigma</a> и тестами <a href="https://github.com/redcanaryco/atomic-red-team" target="_blank">Atomic Red Team</a><br>
+      - Улучшить обоюдное покрытие правил <a href="https://github.com/Neo23x0/sigma/" target="_blank">Sigma</a> и тестов <a href="https://github.com/redcanaryco/atomic-red-team" target="_blank">Atomic Red Team</a><br>
+      - Улучшить покрытие фреймворка <a href="https://atc-project.github.io/atc-react/" target="_blank">ATC RE&CT</a> модулями реагирования (Responders) проекта <a href="https://thehive-project.org/#section_cortex" target="_blank">TheHive</a><br>
+      <br>
+      <h2>План</h2>
+      1. Двухнедельный спринт начинается ...<br>
+      2. Участники выбирают задачи из <a href="sprint_2_backlog_ru.html" target="_blank">беклога</a> или предоставляют/разрабатывают иную аналитику<br>
+      3. Участники опираются на <a href="sprint_2_howto_en.html" target="_blank">специальное руководство</a> с описанием рабочего процесса<br>
+      4. Результаты будут собраны, проверены и добавлены в репозитории проектов на GitHub<br>
+      <br>
+      <h2>Adversary Simulation</h2>
+      some text.
+      <br><br>
+      <h2>Обнаружение Угроз</h2>
+      Существует проект <a href="https://github.com/Neo23x0/sigma/">Sigma</a> — Общий формат сигнатур для SIEM систем.
+      Он включает в себя конвертор, который генерирует поисковые запросы для различных SIEM систем, а также набор правил обнаружения.
+      <br><br>
+      Со временем набор правил обнаружения проекта Sigma стал самым большим и зрелым набором правил обнаружения, управляемым сообществом. 
+      В нем вы можете найти правила обнаружения для новых угроз (например, для эксплойта <a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_exploit_cve_2020_1350.yml">Windows DNS Server RCE CVE-2020-1350</a>), утилит для эмуляции угроз (<a href="https://github.com/Neo23x0/sigma/search?q=empire&unscoped_q=empire">Empire</a>, <a href="https://github.com/Neo23x0/sigma/search?q=cobalt+strike&unscoped_q=cobalt+strike">Cobalt Strike</a>), вредоносного поведения (<a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_kernel_and_3rd_party_drivers_exploits_token_stealing.yml">Token stealing</a>), и многое другое. Большинство правил имеют привязку к фреймворку <a href="https://attack.mitre.org/">MITRE ATT&CK</a>.
+      <br><br>
+      Даже если вы не используете конвертор Sigma, вы можете извлечь выгоду из его обновляемого набора правил обнаружения угроз. Большинство продвинутых команд по безопасности подписаны на обновления проекта Sigma на <a href="https://github.com/Neo23x0/sigma/">GitHub</a>. Это отличное время чтобы подписаться, если вы этого еще не сделали.
+      <br><br>
+      В наборе правил обнаружения проекта Sigma есть критичные пробелы, в то же время в публичном доступе существует множество достойных исследований по обнаружению угроз, материалы которых пока не были добавлены в набор правил проекта. Это то, на чем мы решили сосредоточиться. Детальный список задач можно найти <a href="sprint_2_backlog_ru.html" target="_blank">здесь</a>.
+      <br><br>
+      <h2>Incident Response</h2>
+      Существует проект <a href="https://thehive-project.org/#section_thehive" target="_blank">TheHive</a> — наиболее мощная платформа для реагирования на инциденты (Incident Response Platform) с открытым исходным кодом.
+      Она включает в себя модуль под названием <a href="https://thehive-project.org/#section_cortex" target="_blank">Cortex</a> — движок для анализа данных и активного реагирования на инциденты.
+      Он функционирует посредством двух ключевых сущностей, которые называются <b>Analyzers</b> (Анализаторы) and <b>Responders</b> (модули Реагирования). Они представляют собой простые Python-скрипты, которые используют API для коммуникации со сторонними системами и выполнения определенных действий:
+      <br><br>
+      - <b>Анализаторы (Analyzers)</b> предоставляют возможность анализировать данные (такие как IP-адрес, доменное имя, хеш-сумма файла и т.д.) посредством платформ киберразведки (например, <a href="https://www.misp-project.org/" target="_blank">MISP</a>), систем анализа (например, <a href="https://cuckoosandbox.org/" target="_blank">Cuckoo Sandbox</a>) и сервисов анализа (например, <a href="https://www.virustotal.com/gui/home/upload" target="_blank">VirusTotal</a>)
+      <br><br>
+      - <b>Модули Реагирования (Responders)</b> предоставляют возможность выполнять действия по реагированию (например, заблокировать доменное имя на сервере DNS, заблокировать IP-адрес на межсетевом экране), посредствов запуска Python-скриптов
+      <br><br>
+      Со временем, сообщество (а также авторы проекта) разработали около 150 Анализаторов, которые предоставляют возможность по автоматическому анализу большинства типов данных посредством большинства существующих платформ, систем и сервисов.
+      <br><br>
+      По какой-то причине, этого не произошло с Модулями Реагирования — на данный момент их всего 20, и они далеки от покрытия большинства общих сценариев с распространенными системами.
+      <br><br>
+      Ниже представлено актуальное покрытия фреймворка <a href="https://atc-project.github.io/atc-react/" target="_blank">RE&CT</a> Анализаторами и Модулями Реагирования платформы TheHive.
+      Анализаторы сосредоточены на стадии <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0002/" target="_blank">Идентификации (Identification)</a>, а Модули Реагирования — на стадиях <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0003/" target="_blank">Сдерживания (Containment)</a>, <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0004/" target="_blank">Ликвидации (Eradication)</a>, и <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0005/" target="_blank">Восстановления (Recovery)</a>:
+      <br><br>
+      <details>
+        <summary>Текущее покрытие отмечено зеленым, потенциальное — желтым (кликните чтобы раскрыть)</summary>
+        <pre><iframe src="https://oscd-initiative.github.io/react-navigator/" width="700" height="500"></iframe></pre>
+      </details>
+      <br>
+      <!-- The coverage was built upon <a href="https://github.com/oscd-initiative/Cortex-Analyzers" target="_blank">our fork</a> of repo with TheHive Analyzers and Responders, that we tagged with RE&CT IDs. -->
+      Вот почему мы решили сосредоточиться на разработке Модуляей Реагирования платформы TheHive. Детальный список по данному направлению задач можно найти <a href="sprint_2_backlog_ru.html" target="_blank">здесь</a>.
+      <br><br><br>
+      <center> <a href="sprint_2.html">EN</a> | <a href="sprint_2_ru.html">RU</a> </center>
+      <br>
+      <center> <a href="../index.html">На главную</a> </center>
+      <br>
+  </div>
+ </body>
+</html>
