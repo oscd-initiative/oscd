@@ -27,7 +27,7 @@
   <body class="hack">
     <div class="main container">
       <br>
-      <center> <a href="../index.html">Home</a> </center>
+      <center> <a href="../index_ru.html">Главная</a> </center>
       <br>
       <center> <a href="sprint_2_backlog.html">EN</a> | <a href="sprint_2_backlog_ru.html">RU</a> </center>
       <div>
@@ -37,82 +37,82 @@
       </div>
       <center> <p style="font-size: 16px;">OSCD Sprint #2: Backlog</p></center>
       <br>
-      This time we decided to detail the backlog to bite-size tasks with Estimated Time to Complete (ETC) around 20-30 minutes each. You can find these tasks in the GitHub issues listed in the tables below. 
+      В этот раз мы решили детализировать бэклог до небольших задач с оценочным временем решения (Estimated Time to Complete, ETC) в пределах 20-30 минут. Детальное описание задач по каждому из направлений можно найти в GitHub issues, ссылки на которые перечислены в таблицах.
       <br><br>
-      Also, we listed the knowledge required to solve these tasks. You can find details on that and other important topics in the <a href="sprint_2_howto.html" target="_blank">OSCD How-To</a>.
+      Мы также указали необходимые знания для решения каждой задачи. Вы можете найти детали касательно этого и других важных аспектов в специальном руководстве — <a href="sprint_2_howto_ru.html" target="_blank">OSCD How-To</a>.
       <br><br>
-      It worth mentioning that the backlog does not limit contributions. You are welcome to contribute your private analytics (Atomic Tests, Sigma Rules, TheHive Responders) that are outside of the defined scope.
+      Стоит отметить что бэклог не ограничивает ваши возможности по вкладу в проекты, над которыми мы будем работать в ходе Спринта. Вы можете поделиться любой приватной анатиликой (тестами Atomic Red Team, правилами Sigma, модулями реагирования TheHive), вне зависимости от перечисленных задач. 
       <br><br>
       <h2>Adversary Simulation</h2>
       some text.
       <br><br>
       <h2>Threat Detection</h2>
-      One of the most critical issues of the Sigma Project ruleset is the lack of ability to detect indicators of CMD/PowerShell commands obfuscation. This is our main focus for the Threat Detection part of the Sprint. 
+      Одной из наиболее критичных проблем набора правил проекта Sigma является недостаток возможностей по обнаружению индикаторов обфускации команд CMD/PowerShell. Решение данной проблемы является нашей первостепенной задачей.
       <br><br>
-      Also, there are a few tasks to develop Sigma rules for published Threat Detection researches and Threat Simulation tools.
+      Также перечислены задачи по разработке правил Sigma на основе опубликованных исследований в области Обнаружения Угроз и утилит для Эмуляции Угроз.
       <br><br>
       <table>
         <tr>
-          <th>GitHub Issue (list of tasks inside)</th>
-          <th>Required Knowledge</th>
-          <th><center>ETC per task</center></th>
+          <th>GitHub Issue (список задач доступен по ссылке)</th>
+          <th>Необходимые Знания</th>
+          <th><center>ETC</center></th>
         </tr>
         <tr>
           <td><a href="https://github.com/Neo23x0/sigma/issues/579" target="_blank">Living Off The Land Binaries and Scripts</a></td>
-          <td>Sigma Rules</td>
-          <td>< 30 min</td>
+          <td>Правила Sigma</td>
+          <td>< 30 мин</td>
         </tr>
         <tr>
           <td><a href="https://github.com/Neo23x0/sigma/issues/576" target="_blank">Lateral Movement in Windows Infrastructure</a></td>
-          <td>Splunk queries, Sigma Rules</td>
-          <td>< 30 min</td>
+          <td>Запросы Splunk, Правила Sigma</td>
+          <td>< 30 мин</td>
         </tr>
         <tr>
           <td><a href="https://github.com/Neo23x0/sigma/issues/575" target="_blank">PowerShell Abuse</a></td>
-          <td>Kibana queries, Sigma Rules</td>
-          <td>< 30 min</td>
+          <td>Запросы Kibana, Правила Sigma</td>
+          <td>< 30 мин</td>
         </tr>
         <tr>
           <td><a href="https://github.com/Neo23x0/sigma/issues/574" target="_blank">Privilege Escalation in Windows Environment</a></td>
-          <td>Kibana queries, Sigma Rules</td>
-          <td>< 30 min</td>
+          <td>Запросы Kibana, Правила Sigma</td>
+          <td>< 30 мин</td>
         </tr>
       </table>
       <br><br>
       <h2>Incident Response</h2>
-      The listed GitHub Issues are independent tasks that include the development of one TheHive Responder with multiple Response Actions. These tasks are the most complex ones, that take a lot of time to complete (up to 8 hours if knowledge requirements met). It is recommended to work on them in groups of two-three specialists. Companions could be found in the comments to a specific GitHub Issue.
+      Каждое из перечисленных GitHub Issue является самостоятельной задачей по разработке Модуля Реагирования (TheHive Responder), включающего в себя несколько Действий Реагирования. Это самые сложные задачи, требующие серьезных временных вложений (до 8-х часов, при наличии необходимых знаний). Рекомендуется решать эти задачи группой из двух-трех специалистов. Единомышленников можно найти в комментариях к конкретному Issue на GitHub.
       <br><br>
       <table>
         <tr>
           <th>GitHub Issue</th>
-          <th>Required Knowledge</th>
-          <th><center>ETC per task</center></th>
+          <th>Необходимые Знания</th>
+          <th><center>ETC</center></th>
         </tr>
         <tr>
           <td>Develop TheHive Responder #1</td>
           <td>Python, TheHive Responders</td>
-          <td>~ 4 hours</td>
+          <td>~ 4 часа</td>
         </tr>
         <tr>
           <td>Develop TheHive Responder #2</td>
           <td>Python, TheHive Responders</td>
-          <td>~ 4 hours</td>
+          <td>~ 4 часа</td>
         </tr>
         <tr>
           <td>Develop TheHive Responder #3</td>
           <td>Python, TheHive Responders</td>
-          <td>~ 4 hours</td>
+          <td>~ 4 часа</td>
         </tr>
         <tr>
           <td>Develop TheHive Responder #4</td>
           <td>Python, TheHive Responders</td>
-          <td>~ 4 hours</td>
+          <td>~ 4 часа</td>
         </tr>
       </table>
       <br><br>
       <center> <a href="sprint_2_backlog.html">EN</a> | <a href="sprint_2_backlog_ru.html">RU</a> </center>
       <br>
-      <center> <a href="../index.html">Home</a> </center>
+      <center> <a href="../index_ru.html">Главная</a> </center>
       <br>
   </div>
  </body>
