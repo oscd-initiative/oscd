@@ -43,12 +43,14 @@ a:hover {
 .hack, .hack h1, .hack h2 {
     font-size: 1rem;
     font-style: normal;
+    color: #78bec7
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif
 } 
 
 .hack h1, .hack h2, .hack li, .hack ul {
     font-size:13px;
     float: none;
+    color: #78bec7;
     margin: 0;
     padding: 0
 } 
