@@ -40,7 +40,6 @@
       It's been a while since <a href="sprint_1.html" target="_blank">the First OSCD sprint</a>, dedicated to Threat Detection. This time we will focus on multiple areas of practical CyberSecurity. You can find a detailed backlog <a href="sprint_2_backlog.html" target="_blank">here</a>. The high-level description of the sprint and areas are following.
       <br><br><br>
       <h2>Goals</h2>
-
       - Improve <a href="https://attack.mitre.org" target="_blank">MITRE ATT&CK</a> coverage of open source <a href="https://github.com/Neo23x0/sigma/" target="_blank">Sigma</a> rules and <a href="https://github.com/redcanaryco/atomic-red-team" target="_blank">Atomic Red Team</a> tests<br>
       - Improve cross-coverage of <a href="https://github.com/Neo23x0/sigma/" target="_blank">Sigma</a> rules and <a href="https://github.com/redcanaryco/atomic-red-team" target="_blank">Atomic Red Team</a> tests<br>
       - Improve <a href="https://atc-project.github.io/atc-react/" target="_blank">ATC RE&CT</a> coverage of open source <a href="https://thehive-project.org/#section_cortex" target="_blank">TheHive Responders</a><br>
@@ -51,11 +50,8 @@
       3. Participants use special <a href="sprint_2_howto.html" target="_blank">guideline</a> which will help to get familiar with the workflow<br>
       4. Results will be collected, reviewed and pushed to projects' repositories on GitHub<br>
       <br><br>
-      <h2>Adversary Simulation</h2>
-      some text.
-      <br><br><br>
       <h2>Threat Detection</h2>
-      There is the <a href="https://github.com/Neo23x0/sigma/">Sigma Project</a> — Generic Signature Format for SIEM Systems. 
+      There is the <a href="https://github.com/Neo23x0/sigma/">Sigma project</a> — Generic Signature Format for SIEM Systems. 
       It has a converter that generates searches/queries for different SIEM systems and a set of Detection Rules. 
       <br><br>
       With time, Sigma project ruleset has become the biggest and the most mature community-driven Detection Rules set. This is the place where you could find Detection Rules for emerging threats (i.e. <a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_exploit_cve_2020_1350.yml">Windows DNS Server RCE CVE-2020-1350</a> exploit), adversary simulations tools (<a href="https://github.com/Neo23x0/sigma/search?q=empire&unscoped_q=empire">Empire</a>, <a href="https://github.com/Neo23x0/sigma/search?q=cobalt+strike&unscoped_q=cobalt+strike">Cobalt Strike</a>), adversary behaviors (<a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_kernel_and_3rd_party_drivers_exploits_token_stealing.yml">Token stealing</a>), and many more. Most of the rules are mapped to the <a href="https://attack.mitre.org/">MITRE ATT&CK</a> framework.
@@ -63,6 +59,25 @@
       Even if you are not using Sigma converter, you still can benefit from its ruleset. Most of the advanced security teams are subscribed to the Sigma Project updates on <a href="https://github.com/Neo23x0/sigma/">GitHub</a>. It's a good time to do so if you haven't yet.
       <br><br>
       There are some critical gaps in the Sigma ruleset and plenty of decent publicly available Threat Detection analytics that haven't been added to the ruleset yet. That's what we've decided to focus on. A detailed backlog on Threat Detection could be found <a href="sprint_2_backlog.html" target="_blank">here</a>.
+      <br><br><br>
+      <h2>Adversary Simulation</h2>
+      There is the <a href="https://github.com/redcanaryco/atomic-red-team">Atomic Red Team project</a> — small and highly portable detection tests based on MITRE's ATT&CK. It allows every security team to test their controls by executing simple "atomic tests" that exercise the same techniques used by adversaries.
+      <br><br>
+      With time, Atomic Red Team tests set has become the biggest and the most mature community-driven Adversary Simulation tests set.
+      <br><br>
+      There are atomic tests that are not covered by Sigma detection rules. This means that the community has a way to automatically simulate an adversarial technique but no rule to detect it in the public repository of the Sigma project.
+      <br><br>
+      At the same time, there are Sigma rules that are not covered by Atomic Red Team tests. This means that the community has a way to detect an adversarial technique but no test to simulate it in the public repository of the Atomic Red Team project.
+      <br><br>
+      Here is the actual Atomic Red Team and Sigma projects' cross-coverage matrix:
+      <br><br>
+      <details>
+        <summary>Sigma rule is blue, Atomic test is red, both is purple (click to expand)</summary>
+        <pre><iframe src="https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw%2Egithubusercontent%2Ecom%2Fzinint%2FOSCD%5FSigma%2DART%5FLayers%2Fmaster%2FARTvsSigmaLayer%2Ejson" width="700" height="500"></iframe></pre>
+      </details>
+      <br>
+      We believe that improving cross-coverage of these projects is quite beneficial for the community, that's why we've decided to focus on it.
+      A detailed backlog on Adversary Simulation could be found <a href="sprint_2_backlog.html" target="_blank">here</a>.
       <br><br><br>
       <h2>Incident Response</h2>
       There is the <a href="https://thehive-project.org/#section_thehive" target="_blank">TheHive</a> — the most powerful open source and free Security Incident Response Platform.
