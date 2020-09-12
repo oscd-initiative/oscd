@@ -66,20 +66,26 @@
       <br><br>
       Со временем, набор тестов проекта Atomic Red Team стал самым большим и зрелым набором тестов для эмуляции угроз, управляемым сообществом.
       <br><br>
-      Для некоторых тестов для эмуляции угроз проекта Atomic Red Team не существует соответствующего правил обнаружения в проекте Sigma. Это означает что у сообщества есть способ автоматизированно эмулировать несколько вредоносных техник с целью проверки мер по их обнаружению, но нет правил для их обнаружения в публичном наборе правил проекта Sigma. 
+      Для некоторых тестов эмуляции угроз проекта Atomic Red Team не существует соответствующего правила обнаружения в проекте Sigma. Это означает что у сообщества есть способ автоматизированно эмулировать несколько вредоносных техник с целью проверки мер их обнаружения, но нет правил для их обнаружения в публичном наборе проекта Sigma.
       <br><br>
       В то же время, существуют правила Sigma, для которых нет атомарных тестов в наборе проекта Atomic Red Team. Иными словами, у сообщества есть правила для обнаружения нескольких вредоносных техник, но нет тестов для эмуляции этих вредоносных действий с целью проверки работоспособности правил обнаружения в наборе тестов проекта Atomic Red Team.
       <br><br>
-      Ниже представлено актуальное покрытие фреймворка <a href="https://attack.mitre.org" target="_blank">ATT&CK</a> проектами Atomic Red Team и Sigma:
+      Ниже представлено актуальное покрытие фреймворка <a href="https://attack.mitre.org" target="_blank">ATT&CK</a> аналитикой проектов Atomic Red Team и Sigma. Техники для которых существуют только правила Sigma отмечены синим цветом, тесты Atomic Red Team — красным, оба — фиолетовым (кликните чтобы раскрыть):
       <br><br>
       <details>
-        <summary>Правила Sigma отмечены синим, тесты — красным, оба — фиолетовым (кликните чтобы раскрыть)</summary>
-        <pre><iframe src="https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw%2Egithubusercontent%2Ecom%2Fzinint%2FOSCD%5FSigma%2DART%5FLayers%2Fmaster%2FARTvsSigmaLayer%2Ejson" width="700" height="500"></iframe></pre>
+        <summary> Microsoft Windows</summary>
+        <pre><iframe src="https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fzinint%2FOSCD_Sigma-ART_Layers%2Fmaster%2Fsigma-art-navigator-layer-windows.json" width="700" height="500"></iframe></pre>
+      </details>
+      <details>
+        <summary> Apple macOS</summary>
+        <pre><iframe src="https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fzinint%2FOSCD_Sigma-ART_Layers%2Fmaster%2Fart-navigator-layer-macos.json" width="700" height="500"></iframe></pre>
+      </details>
+      <details>
+        <summary> GNU/Linux</summary>
+        <pre><iframe src="https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fzinint%2FOSCD_Sigma-ART_Layers%2Fmaster%2Fsigma-art-navigator-layer-linux.json" width="700" height="500"></iframe></pre>
       </details>
       <br>
-      (Для подробного изучения воспользуйтесь приложением ATT&CK Navigator, доступным по <a href="https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw%2Egithubusercontent%2Ecom%2Fzinint%2FOSCD%5FSigma%2DART%5FLayers%2Fmaster%2FARTvsSigmaLayer%2Ejson" target="_blank">этой</a> ссылке).
-      <br><br>
-      Мы считаем что улучшение обоюдного покрытия этих проектов является одной из первостепенных проблем. Вот почему мы решили сосредоточиться на этой задаче. Детальный список задач по данному направлению можно найти <a href="sprint_2_backlog_ru.html" target="_blank">здесь</a>.
+      Это то, на чем мы решили сосредоточиться. Детальный список задач по данному направлению можно найти <a href="sprint_2_backlog_ru.html" target="_blank">здесь</a>.
       <br><br><br>
       <h2>Incident Response</h2>
       Существует проект <a href="https://thehive-project.org/#section_thehive" target="_blank">TheHive</a> — наиболее мощная платформа для реагирования на инциденты с открытым исходным кодом.
@@ -98,12 +104,10 @@
       Анализаторы сосредоточены на стадии <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0002/" target="_blank">Идентификации (Identification)</a>, а Модули Реагирования — на стадиях <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0003/" target="_blank">Сдерживания (Containment)</a>, <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0004/" target="_blank">Ликвидации (Eradication)</a>, и <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0005/" target="_blank">Восстановления (Recovery)</a>:
       <br><br>
       <details>
-        <summary>Текущее покрытие отмечено зеленым, потенциальное — желтым (кликните чтобы раскрыть)</summary>
+        <summary> Текущее покрытие отмечено зеленым, потенциальное — желтым (кликните чтобы раскрыть)</summary>
         <pre><iframe src="https://oscd-initiative.github.io/react-navigator/" width="700" height="500"></iframe></pre>
       </details>
       <br>
-      (Для подробного изучения воспользуйтесь приложением RE&CT Navigator, доступным по <a href="https://oscd-initiative.github.io/react-navigator/" target="_blank">этой</a> ссылке).
-      <br><br>
       <!-- The coverage was built upon <a href="https://github.com/oscd-initiative/Cortex-Analyzers" target="_blank">our fork</a> of repo with TheHive Analyzers and Responders, that we tagged with RE&CT IDs. -->
       Вот почему мы решили сосредоточиться на разработке Модулей Реагирования платформы TheHive. Детальный список задач по данному направлению можно найти <a href="sprint_2_backlog_ru.html" target="_blank">здесь</a>.
       <br><br><br>

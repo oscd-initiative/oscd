@@ -58,7 +58,7 @@
       <br><br>
       Even if you are not using Sigma converter, you still can benefit from its ruleset. Most of the advanced security teams are subscribed to the Sigma Project updates on <a href="https://github.com/Neo23x0/sigma/">GitHub</a>. It's a good time to do so if you haven't yet.
       <br><br>
-      There are some critical gaps in the Sigma ruleset and plenty of decent publicly available Threat Detection analytics that haven't been added to the ruleset yet. That's what we've decided to focus on. A detailed backlog on Threat Detection could be found <a href="sprint_2_backlog.html" target="_blank">here</a>.
+      There are some critical gaps in the Sigma ruleset and plenty of decent publicly available Threat Detection analytics that haven't been added to the ruleset yet. That's what we decided to focus on. A detailed backlog on Threat Detection could be found <a href="sprint_2_backlog.html" target="_blank">here</a>.
       <br><br><br>
       <h2>Adversary Simulation</h2>
       There is the <a href="https://github.com/redcanaryco/atomic-red-team">Atomic Red Team project</a> — small and highly portable detection tests based on MITRE's ATT&CK. It allows every security team to test their controls by executing simple "atomic tests" that exercise the same techniques used by adversaries.
@@ -69,17 +69,22 @@
       <br><br>
       At the same time, there are Sigma rules that are not covered by Atomic Red Team tests. In other words, the community has a way to detect an adversarial techniques but no tests to simulate them in the public repository of the Atomic Red Team project.
       <br><br>
-      Here is the actual Atomic Red Team and Sigma projects' coverage of the <a href="https://attack.mitre.org/">ATT&CK</a> framework:
+      Here is the actual Atomic Red Team and Sigma projects' coverage of the <a href="https://attack.mitre.org/">ATT&CK</a> framework. Techniques that are covered by Sigma rules highlighted in blue color, Atomic Red Team tests - in red, both - in purple (click to expand):
       <br><br>
       <details>
-        <summary>Sigma rule is blue, Atomic test is red, both is purple (click to expand)</summary>
-        <pre><iframe src="https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw%2Egithubusercontent%2Ecom%2Fzinint%2FOSCD%5FSigma%2DART%5FLayers%2Fmaster%2FARTvsSigmaLayer%2Ejson" width="700" height="500"></iframe></pre>
+        <summary> Microsoft Windows</summary>
+        <pre><iframe src="https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fzinint%2FOSCD_Sigma-ART_Layers%2Fmaster%2Fsigma-art-navigator-layer-windows.json" width="700" height="500"></iframe></pre>
+      </details>
+      <details>
+        <summary> Apple macOS</summary>
+        <pre><iframe src="https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fzinint%2FOSCD_Sigma-ART_Layers%2Fmaster%2Fart-navigator-layer-macos.json" width="700" height="500"></iframe></pre>
+      </details>
+      <details>
+        <summary> GNU/Linux</summary>
+        <pre><iframe src="https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fzinint%2FOSCD_Sigma-ART_Layers%2Fmaster%2Fsigma-art-navigator-layer-linux.json" width="700" height="500"></iframe></pre>
       </details>
       <br>
-      (You can access the ATT&CK Navigator for detailed overview using <a href="https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw%2Egithubusercontent%2Ecom%2Fzinint%2FOSCD%5FSigma%2DART%5FLayers%2Fmaster%2FARTvsSigmaLayer%2Ejson" target="_blank">this</a> link).
-      <br><br>
-      We believe that improving the cross-coverage of these projects is one of the most important issues. That's why we've decided to focus on it.
-      A detailed backlog on Adversary Simulation could be found <a href="sprint_2_backlog.html" target="_blank">here</a>.
+      That's what we decided to focus on. A detailed backlog on Adversary Simulation could be found <a href="sprint_2_backlog_ru.html" target="_blank">here</a>.
       <br><br><br>
       <h2>Incident Response</h2>
       There is the <a href="https://thehive-project.org/#section_thehive" target="_blank">TheHive</a> — the most powerful open source and free Security Incident Response Platform.
@@ -97,12 +102,10 @@
       Here is the actual TheHive Analyzers and Responders coverage of the <a href="https://atc-project.github.io/atc-react/" target="_blank">RE&CT</a> framework. Analyzers are belonged to the <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0002/" target="_blank">Identification</a> stage, while Responders are mostly to the <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0003/" target="_blank">Containment</a>, <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0004/" target="_blank">Eradication</a>, and <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0005/" target="_blank">Recovery</a> stages:
       <br><br>
       <details>
-        <summary>Current coverage is green, possible is yellow (click to expand)</summary>
+        <summary> Current coverage is green, possible is yellow (click to expand)</summary>
         <pre><iframe src="https://oscd-initiative.github.io/react-navigator/" width="700" height="500"></iframe></pre>
       </details>
       <br>
-      (You can access the RE&CT Navigator for detailed overview using <a href="https://oscd-initiative.github.io/react-navigator/" target="_blank">this</a> link).
-      <br><br>
       <!-- The coverage was built upon <a href="https://github.com/oscd-initiative/Cortex-Analyzers" target="_blank">our fork</a> of repo with TheHive Analyzers and Responders, that we tagged with RE&CT IDs. -->
       That's why we've decided to focus on the TheHive Responders development this time. A detailed backlog on Incident Response could be found <a href="sprint_2_backlog.html" target="_blank">here</a>.
       <br><br><br>
