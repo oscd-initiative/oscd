@@ -37,14 +37,11 @@
       </div>
       <center> <p style="font-size: 16px;">OSCD Sprint #2: Backlog</p></center>
       <br>
-      This time we decided to detail the backlog to bite-size tasks with Estimated Time to Complete (ETC) around 20-30 minutes each. You can find these tasks in the GitHub issues listed in the tables below. 
+      This time we decided to detail the backlog to bite-size tasks with Estimated Time to Complete (ETC). For most of the tasks ETC is around 20-30 minutes. You can find these tasks in the GitHub issues listed in the tables below. 
       <br><br>
       Also, we listed the knowledge required to solve these tasks. You can find details on that and other important topics in the <a href="sprint_2_howto.html" target="_blank">OSCD How-To</a>.
       <br><br>
       It worth mentioning that the backlog does not limit contributions. You are welcome to contribute your private analytics (Atomic Tests, Sigma Rules, TheHive Responders) that are outside of the defined scope.
-      <br><br><br>
-      <h2>Adversary Simulation</h2>
-      some text.
       <br><br><br>
       <h2>Threat Detection</h2>
       One of the most critical issues of the Sigma Project ruleset is the lack of ability to detect indicators of CMD/PowerShell commands obfuscation. This is our main focus for the Threat Detection part of the Sprint. 
@@ -58,40 +55,76 @@
           <th><center>ETC per task</center></th>
         </tr>
         <tr>
-          <td><a href="https://github.com/zinint/OSCD_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md" target="_blank">Invoke-Obfuscation</a></td>
+          <td><a href="https://github.com/zinint/OSCD_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md" target="_blank">Windows: Invoke-Obfuscation</a></td>
           <td>Regexes, Sigma Rules</td>
           <td>< 30 min</td>
         </tr>
         <tr>
-          <td><a href="https://github.com/zinint/OSCD_Invoke-DOSfuscation/blob/master/OSCD%20-%20Issue%20-%20DOSfuscation.md" target="_blank">Invoke-DOSfuscation</a></td>
+          <td><a href="https://github.com/zinint/OSCD_Invoke-DOSfuscation/blob/master/OSCD%20-%20Issue%20-%20DOSfuscation.md" target="_blank">Windows: Invoke-DOSfuscation</a></td>
           <td>Regexes, Sigma Rules</td>
           <td>~ 60 min</td>
         </tr>
         <tr>
-          <td><a href="https://github.com/Neo23x0/sigma/issues/579" target="_blank">Living Off The Land Binaries and Scripts</a></td>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/579" target="_blank">Windows: LOLBAS</a></td>
           <td>Sigma Rules</td>
           <td>< 30 min</td>
         </tr>
         <tr>
-          <td><a href="https://github.com/Neo23x0/sigma/issues/576" target="_blank">Lateral Movement in Windows Infrastructure</a></td>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/576" target="_blank">Windows: Lateral Movement</a></td>
           <td>Splunk queries, Sigma Rules</td>
           <td>< 30 min</td>
         </tr>
         <tr>
-          <td><a href="https://github.com/Neo23x0/sigma/issues/575" target="_blank">PowerShell Abuse</a></td>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/575" target="_blank">Windows: PowerShell Abuse</a></td>
           <td>Kibana queries, Sigma Rules</td>
           <td>< 30 min</td>
         </tr>
         <tr>
-          <td><a href="https://github.com/Neo23x0/sigma/issues/574" target="_blank">Privilege Escalation in Windows Environment</a></td>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/574" target="_blank">Windows: Privilege Escalation</a></td>
           <td>Kibana queries, Sigma Rules</td>
+          <td>< 30 min</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/574" target="_blank">Windows: ART cross-coverage</a></td>
+          <td>ART Tests, Sigma Rules</td>
+          <td>< 30 min</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/574" target="_blank">macOS: ART cross-coverage</a></td>
+          <td>ART Tests, Sigma Rules</td>
+          <td>< 30 min</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/574" target="_blank">Linux: ART cross-coverage</a></td>
+          <td>ART Tests, Sigma Rules</td>
           <td>< 30 min</td>
         </tr>
       <br>
       </table>
       <br><br>
+      <h2>Adversary Simulation</h2>
+      We analyzed the actual coverage of Sigma rules by Atomic Red Team tests and developed a list of tests that are absent, and at the same time could be developed during the Sprint.
+      <br><br>
+      <table>
+        <tr>
+          <th>GitHub Issue (list of tasks inside)</th>
+          <th>Required Knowledge</th>
+          <th><center>ETC per task</center></th>
+        </tr>
+        <tr>
+          <td><a href="link" target="_blank">ART tests for Windows</a></td>
+          <td>ART Tests, Sigma Rules</td>
+          <td>< 30 мин</td>
+        </tr>
+        <tr>
+          <td><a href="link" target="_blank">ART test for  Linux</a></td>
+          <td>ART Tests, Sigma Rules</td>
+          <td>< 30 мин</td>
+        </tr>
+      </table>
+      <br><br>
       <h2>Incident Response</h2>
-      The listed GitHub Issues are independent tasks that include the development of one TheHive Responder with multiple Response Actions. These tasks are the most complex ones, that take a lot of time to complete (up to 8 hours if knowledge requirements met). It is recommended to work on them in groups of two-three specialists. Companions could be found in the comments to a specific GitHub Issue.
+      The listed GitHub issues are independent tasks that include the development of one TheHive Responder with multiple Response Actions. These tasks are the most complex ones, that take a lot of time to complete (up to 8 hours if knowledge requirements met). It is recommended to work on them in groups of two-three specialists. Companions could be found in the comments to a specific GitHub Issue.
       <br><br>
       <table>
         <tr>

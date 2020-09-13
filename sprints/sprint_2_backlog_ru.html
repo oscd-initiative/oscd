@@ -37,60 +37,93 @@
       </div>
       <center> <p style="font-size: 16px;">OSCD Sprint #2: Backlog</p></center>
       <br>
-      В этот раз мы решили детализировать бэклог до небольших задач с примерным временем решения (Estimated Time to Complete, ETC) в пределах 20-30 минут. Детальное описание задач по каждому из направлений можно найти в GitHub issues, ссылки на которые перечислены в таблицах.
+      В этот раз мы решили детализировать бэклог до небольших задач с указанием примерного времени решения - Estimated Time to Complete (ETC). Для большинства задач ETC равно 20-30 минутам. Детальное описание задач по каждому из направлений можно найти в GitHub issues, ссылки на которые перечислены в соответствующих таблицах.
       <br><br>
       Мы также указали необходимые знания для решения каждой задачи. Необходимые детали и другие важные аспекты Вы можете найти в специальном руководстве — <a href="sprint_2_howto_ru.html" target="_blank">OSCD How-To</a>.
       <br><br>
       Стоит отметить что бэклог не ограничивает ваши возможности по вкладу в проекты, над которыми мы будем работать в ходе второго Спринта. Вы можете поделиться любой разработанной анатиликой (тестами Atomic Red Team, правилами Sigma, модулями реагирования TheHive), вне зависимости от перечисленных в бэклоге задач. 
       <br><br><br>
-      <h2>Adversary Simulation</h2>
-      some text.
-      <br><br><br>
       <h2>Threat Detection</h2>
       Одной из наиболее критичных проблем набора правил проекта Sigma является недостаток возможностей по обнаружению индикаторов обфускации команд CMD/PowerShell. Решение данной проблемы является нашей первостепенной задачей.
       <br><br>
       Также перечислены задачи по разработке правил Sigma на основе опубликованных исследований в области Обнаружения Угроз и утилит для Эмуляции Угроз.
-      <br>
+      <br><br>
       <table>
         <tr>
-          <th>GitHub Issue (список задач доступен по ссылке)</th>
+          <th>GitHub Issue (задачи доступны по ссылке)</th>
           <th>Необходимые Знания</th>
           <th><center>ETC</center></th>
         </tr>
         <tr>
-          <td><a href="https://github.com/zinint/OSCD_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md" target="_blank">Invoke-Obfuscation</a></td>
+          <td><a href="https://github.com/zinint/OSCD_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md" target="_blank">Windows: Invoke-Obfuscation</a></td>
           <td>Regexes, Правила Sigma</td>
           <td>< 30 min</td>
         </tr>
         <tr>
-          <td><a href="https://github.com/zinint/OSCD_Invoke-DOSfuscation/blob/master/OSCD%20-%20Issue%20-%20DOSfuscation.md" target="_blank">Invoke-DOSfuscation</a></td>
+          <td><a href="https://github.com/zinint/OSCD_Invoke-DOSfuscation/blob/master/OSCD%20-%20Issue%20-%20DOSfuscation.md" target="_blank">Windows: Invoke-DOSfuscation</a></td>
           <td>Regexes, Правила Sigma</td>
           <td>~ 60 min</td>
         </tr>
         <tr>
-          <td><a href="https://github.com/Neo23x0/sigma/issues/579" target="_blank">Living Off The Land Binaries and Scripts</a></td>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/579" target="_blank">Windows: LOLBAS</a></td>
           <td>Правила Sigma</td>
           <td>< 30 мин</td>
         </tr>
         <tr>
-          <td><a href="https://github.com/Neo23x0/sigma/issues/576" target="_blank">Lateral Movement in Windows Infrastructure</a></td>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/576" target="_blank">Windows: Lateral Movement</a></td>
           <td>Запросы Splunk, Правила Sigma</td>
           <td>< 30 мин</td>
         </tr>
         <tr>
-          <td><a href="https://github.com/Neo23x0/sigma/issues/575" target="_blank">PowerShell Abuse</a></td>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/575" target="_blank">Windows: PowerShell Abuse</a></td>
           <td>Запросы Kibana, Правила Sigma</td>
           <td>< 30 мин</td>
         </tr>
         <tr>
-          <td><a href="https://github.com/Neo23x0/sigma/issues/574" target="_blank">Privilege Escalation in Windows Environment</a></td>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/574" target="_blank">Windows: Privilege Escalation</a></td>
           <td>Запросы Kibana, Правила Sigma</td>
+          <td>< 30 мин</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/574" target="_blank">Windows: ART cross-coverage</a></td>
+          <td>Тесты ART, Правила Sigma</td>
+          <td>< 30 мин</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/574" target="_blank">macOS: ART cross-coverage</a></td>
+          <td>Тесты ART, Правила Sigma</td>
+          <td>< 30 мин</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/574" target="_blank">Linux: ART cross-coverage</a></td>
+          <td>Тесты ART, Правила Sigma</td>
+          <td>< 30 мин</td>
+        </tr>
+      </table>
+      <br><br>
+      <h2>Adversary Simulation</h2>
+      Мы проанализировали текущее покрытие правил Sigma тестами Atomic Red Team и составили список недостающих тестов, которые реалистично разработать в ходе Спинта. 
+      <br><br>
+      <table>
+        <tr>
+          <th>GitHub Issue (задачи доступны по ссылке)</th>
+          <th>Необходимые Знания</th>
+          <th><center>ETC</center></th>
+        </tr>
+        <tr>
+          <td><a href="link" target="_blank">Тесты ART для Windows</a></td>
+          <td>Тесты ART, Правила Sigma</td>
+          <td>< 30 мин</td>
+        </tr>
+        <tr>
+          <td><a href="link" target="_blank">Тест ART для Linux</a></td>
+          <td>Тесты ART, Правила Sigma</td>
           <td>< 30 мин</td>
         </tr>
       </table>
       <br><br>
       <h2>Incident Response</h2>
-      Каждое из перечисленных GitHub Issue является самостоятельной задачей по разработке Модуля Реагирования (TheHive Responder), включающего в себя несколько Действий Реагирования. Это самые сложные задачи, требующие серьезных временных вложений (до 8-х часов, при наличии необходимых знаний). Рекомендуется решать эти задачи группой из двух-трех специалистов. Единомышленников можно найти в комментариях к конкретному Issue на GitHub.
+      Каждое из перечисленных GitHub issues является самостоятельной задачей по разработке Модуля Реагирования (TheHive Responder), включающего в себя несколько Действий Реагирования. Это самые сложные задачи, требующие серьезных временных вложений (до 8-х часов, при наличии необходимых знаний). Рекомендуется решать эти задачи группой из двух-трех специалистов. Единомышленников можно найти в комментариях к конкретному Issue на GitHub.
       <br><br>
       <table>
         <tr>
