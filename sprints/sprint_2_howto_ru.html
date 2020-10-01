@@ -161,7 +161,15 @@
       </table>
       <br><br>
       <h2>Как добавить вашу аналитику для проверки</h2>
-      Создайте Pull Request на GitHub в ветку `oscd` целевого репозиторий проекта (<a href="https://github.com/redcanaryco/atomic-red-team" target="_blank">Atomic Red Team</a>, <a href="https://github.com/Neo23x0/sigma" target="_blank">Sigma</a>, <a href="https://github.com/TheHive-Project/Cortex-Analyzers" target="_blank">Cortex-Analyzers</a> — репозиторий TheHive Responders). Ваш Pull Request будет проверен и прокомментирован.
+      Создайте <b>один Pull Request для каждой разработанной аналитики</b>. Например, вы создали два теста Atomic Red Team. Вам необходимо создать два Pull Request для каждого из тестов. То же логика распространяется на правила Sigma.<br>
+      Вам необходимо создавать Pull Request в следующие ветки:
+      <br><br>
+
+      - ветка `oscd` для проекта <a href="https://github.com/Neo23x0/sigma" target="_blank">Sigma</a><br>
+      - ветка `oscd` для проекта <a href="https://github.com/redcanaryco/atomic-red-team" target="_blank">Atomic Red Team</a><br>
+      - ветка `feature/oscd` для проекта <a href="https://github.com/TheHive-Project/Cortex-Analyzers" target="_blank">Cortex-Analyzers</a> (репозиторий TheHive Responders )<br>
+      <br>
+      Ваш Pull Request будет проверен и прокомментирован координаторами спринта или авторами проектов.
       <br><br><br>
       <h2>Как связаться с другими участниками</h2>
       Присоединяйтесь к обсуждению в GitHub Issues / Pull Requests проекта который вас интересует, или создайте собственное Issue с вашим вопросом.
