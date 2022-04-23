@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OSCD: Sprint #2 Backlog</title>
+    <link rel="stylesheet" href="../hack_2.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/manifest.json">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="../img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#000000">
+  </head>
+  <body class="hack">
+    <div class="main container">
+      <br>
+      <center> <a href="../index_ru.html">Главная</a> </center>
+      <br>
+      <center> <a href="sprint_2_backlog.html">EN</a> | <a href="sprint_2_backlog_ru.html">RU</a> </center>
+      <div>
+      <p align="center">
+        <img src="../img/oscd_logo_v2.gif" alt="OSCD">
+      </p>
+      </div>
+      <center> <p style="font-size: 16px;">OSCD Sprint #2: Backlog</p></center>
+      <br>
+      В этот раз мы решили детализировать бэклог до небольших задач с указанием примерного времени решения - Estimated Time to Complete (ETC). Для большинства задач ETC равно 20-30 минутам. Детальное описание задач по каждому из направлений можно найти в GitHub issues, ссылки на которые перечислены в соответствующих таблицах.
+      <br><br>
+      Мы также указали необходимые знания для решения каждой задачи. Вы можете найти необходимую информацию касательно этого и других важных аспектов в специальном руководстве — <a href="sprint_2_howto_ru.html" target="_blank">OSCD How-To</a>.
+      <br><br>
+      Стоит отметить что бэклог не ограничивает ваши возможности по вкладу в проекты, над которыми мы будем работать в ходе второго спринта. Вы можете поделиться любой разработанной анатиликой (тестами Atomic Red Team, правилами Sigma, модулями реагирования TheHive), вне зависимости от перечисленных в бэклоге задач. 
+      <br><br><br>
+      <h2>Threat Detection</h2>
+      Одной из наиболее критичных проблем набора правил проекта Sigma является недостаток возможностей по обнаружению индикаторов обфускации команд CMD/PowerShell. Решение данной проблемы является нашей первостепенной задачей.
+      <br><br>
+      Также перечислены задачи по разработке правил Sigma на основе опубликованных исследований в области Обнаружения Угроз и утилит для Эмуляции Угроз.
+      <br><br>
+      <table>
+        <tr>
+          <th>GitHub Issue (задачи доступны по ссылке)</th>
+          <th>Необходимые Знания</th>
+          <th><center>ETC</center></th>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/1009" target="_blank">Windows: Invoke-Obfuscation</a></td>
+          <td>Regexes, Правила Sigma</td>
+          <td>< 30 min</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/1010" target="_blank">Windows: Invoke-DOSfuscation</a></td>
+          <td>Regexes, Правила Sigma</td>
+          <td>~ 1 час</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/1014" target="_blank">Windows: LOLBAS</a></td>
+          <td>Правила Sigma</td>
+          <td>< 30 мин</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/576" target="_blank">Windows: Lateral Movement</a></td>
+          <td>Запросы Splunk, Правила Sigma</td>
+          <td>< 30 мин</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/575" target="_blank">Windows: PowerShell Abuse</a></td>
+          <td>Запросы Kibana, Правила Sigma</td>
+          <td>< 30 мин</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/574" target="_blank">Windows: Privilege Escalation</a></td>
+          <td>Запросы Kibana, Правила Sigma</td>
+          <td>< 30 мин</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/1013" target="_blank">Windows: ART cross-coverage</a></td>
+          <td>Тесты Atomic Red Team, Правила Sigma</td>
+          <td>~ 1 час<sup>[*]</sup></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/1012" target="_blank">macOS: ART cross-coverage</a></td>
+          <td>Тесты Atomic Red Team, Правила Sigma</td>
+          <td>~ 1 час</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Neo23x0/sigma/issues/1011" target="_blank">Linux: ART cross-coverage</a></td>
+          <td>Тесты Atomic Red Team, Правила Sigma</td>
+          <td>~ 1 час<sup>[*]</td>
+        </tr>
+      </table>
+      <br><br>
+      <h2>Adversary Simulation</h2>
+      Мы проанализировали текущее покрытие правил Sigma тестами Atomic Red Team и составили список недостающих тестов, которые реалистично разработать в ходе спринта. 
+      <br><br>
+      <table>
+        <tr>
+          <th>GitHub Issue (задачи доступны по ссылке)</th>
+          <th>Необходимые Знания</th>
+          <th><center>ETC</center></th>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/redcanaryco/atomic-red-team/issues/1220" target="_blank">Тесты Atomic Red Team для Windows</a></td>
+          <td>Тесты Atomic Red Team, Правила Sigma</td>
+          <td>~ 1 час<sup>[*]</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/redcanaryco/atomic-red-team/issues/1219" target="_blank">Тест Atomic Red Team для Linux</a></td>
+          <td>Тесты Atomic Red Team, Правила Sigma</td>
+          <td>~ 30 мин</td>
+        </tr>
+      </table>
+      <br><br>
+      <h2>Incident Response</h2>
+      Каждое из перечисленных GitHub issues является самостоятельной задачей по разработке Модуля Реагирования (TheHive Responder), включающего в себя несколько Действий Реагирования. Это самые сложные задачи, требующие серьезных временных вложений (до 16 часов, при наличии необходимых знаний). Рекомендуется решать эти задачи группой из двух-трех специалистов. Единомышленников можно найти в комментариях к конкретному issue на GitHub.
+      <br><br>
+      <table>
+        <tr>
+          <th>GitHub Issue</th>
+          <th>Необходимые Знания</th>
+          <th><center>ETC</center></th>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/TheHive-Project/Cortex-Analyzers/issues/855" target="_blank">Palo Alto NGFW</a></td>
+          <td>Python, TheHive Responders</td>
+          <td>~ 16 часов</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/TheHive-Project/Cortex-Analyzers/issues/856" target="_blank">Carbon Black Predictive Security Cloud</a></td>
+          <td>Python, TheHive Responders</td>
+          <td>~ 8 часов</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/TheHive-Project/Cortex-Analyzers/issues/857" target="_blank">Duo Security</a></td>
+          <td>Python, TheHive Responders</td>
+          <td>~ 4 часа</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/TheHive-Project/Cortex-Analyzers/issues/858" target="_blank">Azure Active Directory</a></td>
+          <td>Python, TheHive Responders</td>
+          <td>~ 4 часа</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/TheHive-Project/Cortex-Analyzers/issues/859" target="_blank">Google Gmail</a></td>
+          <td>Python, TheHive Responders</td>
+          <td>~ 8 часов</td>
+        </tr>
+      </table>
+      <br><br>
+      [*] ETC для большинства задач. Те задачи, которые могут занять больше времени, отдельно выделены в списке задач GitHub issue.
+      <br><br><br>
+      <center> <a href="sprint_2_backlog.html">EN</a> | <a href="sprint_2_backlog_ru.html">RU</a> </center>
+      <br>
+      <center> <a href="../index_ru.html">Главная</a> </center>
+      <br>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OSCD: Sprint #2 Main</title>
+    <link rel="stylesheet" href="../hack_2.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/manifest.json">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="../img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#000000">
+  </head>
+  <body class="hack">
+    <div class="main container">
+      <br>
+      <center> <a href="../index.html">Home</a> </center>
+      <br>
+      <center> <a href="sprint_2.html">EN</a> | <a href="sprint_2_ru.html">RU</a> </center>
+      <div>
+      <p align="center">
+        <img src="../img/oscd_logo_v2.gif" alt="OSCD">
+      </p>
+      </div>
+      <center> <p style="font-size: 16px;">OSCD Sprint #2: Simulation, Detection & Response</p> </center>
+      <br>
+      It's been a while since <a href="sprint_1.html" target="_blank">the First OSCD Sprint</a>, dedicated to Threat Detection. This time we will focus on multiple areas of practical CyberSecurity. You can find a detailed backlog <a href="sprint_2_backlog.html" target="_blank">here</a>. Below is a general description of the sprint and areas of work.
+      <br><br><br>
+      <h2>Goals</h2>
+      - Improve <a href="https://attack.mitre.org" target="_blank">MITRE ATT&CK</a> coverage of open source <a href="https://github.com/Neo23x0/sigma/" target="_blank">Sigma</a> rules and <a href="https://github.com/redcanaryco/atomic-red-team" target="_blank">Atomic Red Team</a> tests<br>
+      - Improve cross-coverage of <a href="https://github.com/Neo23x0/sigma/" target="_blank">Sigma</a> rules and <a href="https://github.com/redcanaryco/atomic-red-team" target="_blank">Atomic Red Team</a> tests<br>
+      - Improve <a href="https://atc-project.github.io/atc-react/" target="_blank">ATC RE&CT</a> coverage of open source <a href="https://thehive-project.org/#section_cortex" target="_blank">TheHive Responders</a><br>
+      <br><br>
+      <h2>The plan</h2>
+      1. Two weeks-long sprint starts October 5, 2020<br>
+      2. Participants pick up tasks from the <a href="sprint_2_backlog.html" target="_blank">backlog</a> or contribute other analytics<br>
+      3. Participants use special <a href="sprint_2_howto.html" target="_blank">guideline</a> which will help to get familiar with the workflow<br>
+      4. Results will be collected, reviewed, and pushed to projects' repositories on GitHub<br>
+      <br><br>
+      <h2>Threat Detection</h2>
+      There is the <a href="https://github.com/Neo23x0/sigma/">Sigma project</a> — Generic Signature Format for SIEM Systems. 
+      It has a converter that generates searches/queries for different SIEM systems and a set of Detection Rules. 
+      <br><br>
+      With time, the Sigma project ruleset has become the biggest (more than 600 rules) and the most mature community-driven Detection Rules set. This is the place where you could find Detection Rules for emerging threats (i.e. <a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_exploit_cve_2020_1350.yml">Windows DNS Server RCE CVE-2020-1350</a> exploit), adversary simulations tools (<a href="https://github.com/Neo23x0/sigma/search?q=empire&unscoped_q=empire">Empire</a>, <a href="https://github.com/Neo23x0/sigma/search?q=cobalt+strike&unscoped_q=cobalt+strike">Cobalt Strike</a>), adversary behaviors (<a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_kernel_and_3rd_party_drivers_exploits_token_stealing.yml">Token stealing</a>), and many more. Most of the rules are mapped to the <a href="https://attack.mitre.org/">MITRE ATT&CK</a> framework.
+      <br><br>
+      Even if you are not using Sigma converter, you still can benefit from its ruleset. Most of the advanced security teams are subscribed to the Sigma Project updates on <a href="https://github.com/Neo23x0/sigma/">GitHub</a>. It's a good time to do so if you haven't yet.
+      <br><br>
+      There are some critical gaps in the Sigma ruleset and plenty of decent publicly available Threat Detection analytics that haven't been added to the ruleset yet. That's what we decided to focus on. A detailed backlog on Threat Detection could be found <a href="sprint_2_backlog.html" target="_blank">here</a>.
+      <br><br><br>
+      <h2>Adversary Simulation</h2>
+      There is the <a href="https://github.com/redcanaryco/atomic-red-team">Atomic Red Team project</a> — small and highly portable detection tests based on MITRE's ATT&CK. It allows every security team to test their controls by executing simple "atomic tests" that exercise the same techniques used by adversaries.
+      <br><br>
+      With time, Atomic Red Team tests set has become the biggest and the most mature community-driven Adversary Simulation tests set.
+      <br><br>
+      There are atomic tests that are not covered by Sigma detection rules. This means that the community has a way to automatically simulate adversarial techniques but no rules to detect them in the public repository of the Sigma project.
+      <br><br>
+      At the same time, there are Sigma rules that are not covered by Atomic Red Team tests. In other words, the community has a way to detect adversarial techniques but no tests to simulate them in the public repository of the Atomic Red Team project.
+      <br><br>
+      Here is the actual Atomic Red Team and Sigma projects' coverage of the <a href="https://attack.mitre.org/">ATT&CK</a> framework. Techniques that are covered by Sigma rules highlighted in blue color, Atomic Red Team tests - in red, both - in purple (click to expand):
+      <br><br>
+      <details>
+        <summary> Microsoft Windows</summary>
+        <pre><iframe src="https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Foscd-initiative%2FOSCD_Sigma-ART_Layers%2Fmaster%2Fsigma-art-navigator-layer-windows.json" width="700" height="500"></iframe></pre>
+      </details>
+      <details>
+        <summary> Apple macOS</summary>
+        <pre><iframe src="https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Foscd-initiative%2FOSCD_Sigma-ART_Layers%2Fmaster%2Fart-navigator-layer-macos.json" width="700" height="500"></iframe></pre>
+      </details>
+      <details>
+        <summary> GNU/Linux</summary>
+        <pre><iframe src="https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Foscd-initiative%2FOSCD_Sigma-ART_Layers%2Fmaster%2Fsigma-art-navigator-layer-linux.json" width="700" height="500"></iframe></pre>
+      </details>
+      <br>
+      That's what we decided to focus on. A detailed backlog on Adversary Simulation could be found <a href="sprint_2_backlog.html" target="_blank">here</a>.
+      <br><br><br>
+      <h2>Incident Response</h2>
+      There is the <a href="https://thehive-project.org/#section_thehive" target="_blank">TheHive</a> — the most powerful open source and free Security Incident Response Platform.
+      It has a module called <a href="https://thehive-project.org/#section_cortex" target="_blank">Cortex</a> — Observable Analysis and Active Response Engine. 
+      It operates by two key entities, called <b>Analyzers</b> and <b>Responders</b> — simple Python scripts that utilize API to communicate with 3rd party systems and execute some actions:
+      <br><br>
+      - <b>Analyzers</b> provide the ability to analyze observables (i.e. IP address, Domain name, File hash etc) via Cyber Threat Intelligence platforms (i.e. <a href="https://www.misp-project.org/" target="_blank">MISP</a>), analysis systems (i.e. <a href="https://cuckoosandbox.org/" target="_blank">Cuckoo Sandbox</a>) and lookup services (i.e. <a href="https://www.virustotal.com/gui/home/upload" target="_blank">VirusTotal</a>)
+      <br><br>
+      - <b>Responders</b> provide the ability to execute some Response Actions (i.e. block domain name on a DNS server, block IP address on a firewall etc) by executing these actions with Python scripts
+      <br><br>
+      With time, the community developed about 150 Analyzers, which provide the ability to automatically analyze most of the observables types by most of the existing platforms, systems, and services.
+      <br><br>
+      For some reason, it didn't happen the same way with the Responders — there are only 20 of them, and they are far away from covering most common cases with common systems.
+      <br><br>
+      Here is the actual TheHive Analyzers and Responders coverage of the <a href="https://atc-project.github.io/atc-react/" target="_blank">RE&CT</a> framework. Analyzers are belonged to the <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0002/" target="_blank">Identification</a> stage, while Responders are mostly to the <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0003/" target="_blank">Containment</a>, <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0004/" target="_blank">Eradication</a>, and <a href="https://atc-project.github.io/atc-react/Response_Stages/RS0005/" target="_blank">Recovery</a> stages:
+      <br><br>
+      <details>
+        <summary> Current coverage is green, possible is yellow (click to expand)</summary>
+        <pre><iframe src="https://oscd-initiative.github.io/react-navigator/" width="700" height="500"></iframe></pre>
+      </details>
+      <br>
+      <!-- The coverage was built upon <a href="https://github.com/oscd-initiative/Cortex-Analyzers" target="_blank">our fork</a> of repo with TheHive Analyzers and Responders, that we tagged with RE&CT IDs. -->
+      That's why we've decided to focus on the TheHive Responders development this time. A detailed backlog on Incident Response could be found <a href="sprint_2_backlog.html" target="_blank">here</a>.
+      <br><br>
+      <h2>Results</h2>
+      - Added 287 Sigma rules in total. 242 developed and 305 updated by OSCD participants (<a href="https://github.com/SigmaHQ/sigma/pull/1362">Pull Request</a>). 45 rules added by <a href="https://twitter.com/otr_community">OTR Community</a> (<a href="https://github.com/SigmaHQ/sigma/pull/1158">Pull Request</a>); <br>
+      - Developed 23 Atomic Red Team tests and updated 7 (<a href="https://github.com/redcanaryco/atomic-red-team/pull/1431">Pull Request</a>); <br>
+      - Developed 24 TheHive Responders to automate response actions in Palo Alto NGFW, Duo Security, Gmail and Azure Active Directory (<a href="https://github.com/TheHive-Project/Cortex-Analyzers/pull/991">Pull Request</a>); <br>
+      - Developed 1 TheHive Analyzer to automate IOC and CVE analysis with Vulners.com (<a href="https://github.com/TheHive-Project/Cortex-Analyzers/pull/880">Pull Request</a>).
+      <br><br>
+      It is second time we increased Sigma ruleset by <b>more than 30%.</b><br>
+      Summary published on <a href="https://medium.com/oscd/oscd-sprint-2-detection-simulation-response-results-43fd9298128c">Medium</a>.
+      <br><br>
+      <h2>Participants</h2>
+      <table style="border-collapse: collapse; border: none; width: auto;">
+
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇺🇸 Greg Howell</td>
+          <td style="border: none; padding: 2px;">| <a href="https://twitter.com/OTR_Community">Open Threat Research</a></td>
+        </tr>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇺🇸 <a href="https://twitter.com/Cyb3rPandaH">Jose Rodriguez</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://twitter.com/OTR_Community">Open Threat Research</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇺🇸 <a href="https://twitter.com/neu5ron">Nate Guagenti</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://twitter.com/OTR_Community">Open Threat Research</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇺🇸 Patrick St. John</td>
+          <td style="border: none; padding: 2px;">| <a href="https://twitter.com/OTR_Community">Open Threat Research</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇺🇸 <a href="https://twitter.com/Cyb3rWard0g">Roberto Rodriguez</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://twitter.com/OTR_Community">Open Threat Research</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇺🇸 <a href="https://twitter.com/craigtweets">Craig Young</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://www.tripwire.com/">Tripwire</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇺🇸 <a href="https://twitter.com/danielweiner93">Daniel Weiner</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇺🇸 <a href="https://twitter.com/cyb3rbuff">Hare Sudhan</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇺🇸 <a href="https://twitter.com/remotephone">Jaime Flores</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇺🇸 <a href="https://twitter.com/JohnLaTwC">John Lambert</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://microsoft.com/">Microsoft</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇺🇸 <a href="https://twitter.com/tuckner">John Tuckner</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇺🇸 <a href="https://twitter.com/WordPlas">Ryan Plas</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://www.stage2sec.com">Stage 2 Security</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇷🇺 Denis Beyu</td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇷🇺 <a href="https://twitter.com/Dmitry_U4">Dmitry Uchakin</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://www.kaspersky.com/">Kaspersky Lab</a>/<a href="https://www.vulners.com/">Vulners.com</a></td>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇷🇺 Igor Fits</td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇷🇺 <a href="https://csirt.jet.su">Ilyas Ochkov</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇷🇺 Maxim Konakin</td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇷🇺 Natalia Shornikova</td>
+          <td style="border: none; padding: 2px;">| <a href="https://www.izsoc.ru/">IZ SOC</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇷🇺 <a href="https://twitter.com/HeirhabarovT">Teymur Kheirkhabarov</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://www.bi.zone">BI.ZONE SOC</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇷🇺 <a href="https://twitter.com/vasebur">Vasiliy Burov</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇵🇱 <a href="https://twitter.com/bczyz1">Bartlomiej Czyz</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇵🇱 <a href="https://twitter.com/mrblacyk">Jakob Weinzettl</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://www.tieto.com/en/what-we-do/managed-services-and-integration/security-services/security-operations-center/">Tieto SOC</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇵🇱 <a href="https://twitter.com/sn0w0tter">Mateusz Wydra</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://www.relativity.com/ediscovery-software/relativityone/trust/threat-prevention/our-team/">Relativity</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇵🇱 <a href="https://twitter.com/aestimi">Tim Ismilyaev</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://www.manasecurity.com/">Mana Security</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇹🇷 <a href="https://twitter.com/sblmsrsn">Ensar Şamil</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇹🇷 <a href="https://twitter.com/caliskanfurkan_">Furkan Çalışkan</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://www.ziraatteknoloji.com">Ziraat Teknoloji</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇹🇷 <a href="https://twitter.com/semanurtg">Semanur Guneysu</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://www.destel.com.tr/">DESTEL/SOC</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇹🇷 <a href="https://twitter.com/ogunal00">Ömer Günal</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇦🇺 <a href="https://twitter.com/CyberRaiju">Jai Minton</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇦🇺 Jonathan Cheong</td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇦🇺 <a href="https://twitter.com/svch0st">Zach Stanford</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://twitter.com/CxCyber">CyberCX</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇨🇦 <a href="https://twitter.com/v3t0_">Avneet Singh</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇨🇦 <a href="https://twitter.com/tas_kmanager">Mangatas Tondang</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇫🇷 <a href="https://twitter.com/gregclermont">Grégoire Clermont</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇫🇷 <a href="https://twitter.com/nadouani">Nabil Adouani</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://thehive-project.org/">TheHive</a>/<a href="https://www.strangebee.com/">StrangeBee</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇮🇳 <a href="https://twitter.com/iamkirankmr">Kiran Kumar</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇮🇳 <a href="https://twitter.com/OG0Sec">Omkar Gudhate</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇦🇪 <a href="https://twitter.com/stvetro">Victor Sergeev</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://www.helpag.com">Help AG</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇦🇹 <a href="https://twitter.com/strassi7">David Straßegger</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇧🇷 <a href="https://twitter.com/_w0rk3r">Jonhnathan Ribeiro</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇩🇪 <a href="https://twitter.com/blubbfiction">Thomas Patzke</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://github.com/Neo23x0/sigma/">Sigma Project</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇪🇸 <a href="https://twitter.com/aomanzanera">Alejandro Ortuno</a></td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇭🇺 <a href="https://twitter.com/AcsGacs">Gyorgy Acs</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://cisco.com/">Cisco</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇮🇱 Eli Salem</td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇳🇱 Sander Wiebing</td>
+          <td style="border: none; padding: 2px;">| <a href="https://www.nfir.nl/">NFIR B.V.</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;"><img src="../img/Anti-war_flag_of_Russian_protesters_2022.png" style="width:1em;vertical-align:middle;">  <a href="https://twitter.com/yugoslavskiy">Daniil Yugoslavskiy</a></td>
+          <td style="border: none; padding: 2px;">| <a href="https://twitter.com/atc_project">Atomic Threat Coverage</a></td>
+        </tr>
+        <tr style="border: none; padding: 2px;">
+          <td style="border: none; padding: 2px;">🇸🇬 Gleb Sukhodolskiy</td>
+          <td style="border: none; padding: 2px;">| Independent Researcher </td>
+        </tr>
+      </table>
+      <br><br>
+      <center> <a href="sprint_2.html">EN</a> | <a href="sprint_2_ru.html">RU</a> </center>
+      <br>
+      <center> <a href="../index.html">Home</a> </center>
+      <br>
+  </div>
+ </body>
+</html>

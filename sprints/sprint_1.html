@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OSCD: Sprint #1</title>
+    <link rel="stylesheet" href="../hack.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="hack">
+    <div class="main container">
+      <br>
+      <center> <a href="../index.html">Home</a> </center>
+      <br>
+      <center> <a href="sprint_1.html">EN</a> | <a href="sprint_1_ru.html">RU</a> </center>
+      <div>
+      <p align="center">
+       <img src="../img/oscd_logo_v1.5.jpeg" alt="OSCD">
+      </p>
+      </div>
+      <center> <p style="font-size: 16px;"><b>OSCD Sprint #1: Threat Detection</b></p> </center>
+      <br>
+      There is the <a href="https://github.com/Neo23x0/sigma/">Sigma Project</a> — Generic Signature Format for SIEM Systems. 
+      It has a converter that generates searches/queries for different SIEM systems and a set of Detection Rules. 
+      <br><br>
+      With time, Sigma project ruleset has become the biggest and the most mature community-driven Detection Rules set. This is the place where you could find Detection Rules for emerging threats (like <a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_rdp_potential_cve-2019-0708.yml">BlueKeep</a> exploits), adversary simulations tools (<a href="https://github.com/Neo23x0/sigma/search?q=empire&unscoped_q=empire">Empire</a>, <a href="https://github.com/Neo23x0/sigma/search?q=cobalt+strike&unscoped_q=cobalt+strike">Cobalt Strike</a>), adversary behaviors (<a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_kernel_and_3rd_party_drivers_exploits_token_stealing.yml">Token stealing</a>), and many more. Most of the rules are mapped to the <a href="https://attack.mitre.org/">MITRE ATT&CK</a>.
+      <br><br>
+      Even if you are not using Sigma converter, you still can benefit from its ruleset. Most of the advanced security teams are subscribed to the Sigma Project updates on <a href="https://github.com/Neo23x0/sigma/">GitHub</a>. It's a good time to do so if you haven't yet.
+      <br><br>
+      There are some gaps and issues in it, at the same time there is plenty of decent analytics published that haven't been added to Sigma Project repository. This is the thing we've decided to focus on.
+      <br><br>
+      <h2>Goals</h2>
+      - Improve <a href="https://attack.mitre.org">MITRE ATT&CK</a> coverage of open source Sigma ruleset<br>
+      - Push forward the culture of Sigma format use
+      <br><br>
+      <h2>The plan</h2>
+      1. Two weeks-long sprint starts October 21, 2019<br>
+      2. Participants pick up tasks from the <a href="https://docs.google.com/document/d/1aAIZr4TKwF94zzVi44tAPs-HLJRg1Nz62GZr4oIXoEA">backlog</a> or contribute other analytics<br>
+      3. Development and testing will be done using community or personal laboratory<br>
+      4. Participants use special <a href="https://docs.google.com/document/d/1EGKfXwlea-Nf1TwqZH09dqPjerDbo6PFyt9DpX0daRk">guideline</a> which will help to get familiar with the workflow<br>
+      5. Results will be collected, reviewed and pushed to Sigma Project repository on GitHub
+      <br><br>
+      <h2>Results</h2>
+      - Developed 144 Sigma rules<br>
+      - Improved 19 existing rules and deprecated 2<br>
+      <br>
+      This way, we increased Sigma ruleset by <b>more than 40%</b>.<br>
+      <br>
+      Listing of the rules is available in the description of the <a href="https://github.com/Neo23x0/sigma/pull/554">Pull Request</a> to Sigma repo.<br>
+      Summary published on <a href="https://medium.com/oscd/oscd-threat-detection-sprint-1-results-en-a78742d2e67a">Medium</a>.
+      <br><br>
+      <h2>Participants</h2>
+      <table style="border: 1px solid transparent">
+        <tr>
+          <td>🇩🇪 Eva Maria Anhaus</td>
+          <td> | <a href="https://www.bsi-fuer-buerger.de">BSI</a></td>
+        </tr>
+        <tr>
+          <td>🇩🇪 Jan Hasenbusch</td>
+          <td> | <a href="https://www.bsi-fuer-buerger.de">BSI</a></td>
+        </tr>
+        <tr>
+          <td>🇩🇪 <a href="https://twitter.com/blubbfiction">Thomas Patzke</a></td>
+          <td> | <a href="https://github.com/Neo23x0/sigma/">Sigma Project</a></td>
+        </tr>
+        <tr>
+          <td>🇷🇺 Denis Beyu</td>
+          <td> | Independent Researcher </td>
+        </tr>
+        <tr>
+          <td>🇷🇺 <a href="https://csirt.jet.su">Ilyas Ochkov</a></td>
+          <td> | Independent Researcher </td>
+        </tr>
+        <tr>
+          <td>🇷🇺 <a href="https://twitter.com/HeirhabarovT">Teymur Kheirkhabarov</a></td>
+          <td> | <a href="https://www.bi.zone">BI.ZONE SOC</a></td>
+        </tr>
+        <tr>
+          <td>🇵🇱 <a href="https://twitter.com/mrblacyk">Jakob Weinzettl</a></td>
+          <td> | <a href="https://www.tieto.com/en/what-we-do/managed-services-and-integration/security-services/security-operations-center/">Tieto SOC</a></td>
+        </tr>
+        <tr>
+          <td>🇵🇱 <a href="https://twitter.com/sn0w0tter">Mateusz Wydra</a></td>
+          <td> | <a href="https://www.relativity.com/ediscovery-software/relativityone/trust/threat-prevention/our-team/">Relativity</a></td>
+        </tr>
+        <tr>
+          <td>🇦🇪 <a href="https://twitter.com/stvetro">Victor Sergeev</a></td>
+          <td> | <a href="https://www.helpag.com">Help AG</a></td>
+        </tr>
+        <tr>
+          <td>🇦🇷 <a href="https://twitter.com/darkquassar">Diego Perez</a></td>
+          <td> | Independent Researcher </td>
+        </tr>  
+        <tr>
+          <td>🇦🇺 <a href="https://twitter.com/4A616D6573">James Pemberton</a></td>
+          <td> | <a href="https://www.hydro.com.au">Hydro Tasmania</a></td>
+        </tr>
+        <tr>
+          <td>🇨🇿 Ian Davis</td>
+          <td> | <a href="https://www.tieto.com/en/what-we-do/managed-services-and-integration/security-services/security-operations-center/">Tieto SOC</a></td>
+        </tr>
+        <tr>
+          <td><img src="../img/Anti-war_flag_of_Russian_protesters_2022.png" style="width:1em;vertical-align:middle;border: 0.01em solid;">  <a href="https://twitter.com/yugoslavskiy">Daniil Yugoslavskiy</a></td>
+          <td> | <a href="https://twitter.com/atc_project">Atomic Threat Coverage</a></td>
+        </tr>
+        <tr>
+          <td>🇸🇬 Gleb Sukhodolskiy</td>
+          <td> | Independent Researcher </td>
+        </tr>
+        <tr>
+          <td>🇸🇮 Tom Kern</td>
+          <td> | <a href="https://www.nil.com/en/security/security-operations-center-soc-building-services/">NIL SOC</a></td>
+        </tr>
+        <tr>
+          <td>🇺🇸 <a href="https://twitter.com/danielhbohannon">Daniel Bohannon</a></td>
+          <td> | <a href="https://www.fireeye.com/services.html">FireEye</a></td>
+        </tr>
+      </table>
+      <br><br>
+      <h2>Thanks to</h2>
+      - <a href="https://2019.hack.lu">hack.lu</a> organizers for a place on conference premises<br>
+      <br><br>
+      <center> <a href="sprint_1.html">EN</a> | <a href="sprint_1_ru.html">RU</a> </center>
+      <br>
+      <center> <a href="../index.html">Home</a> </center>
+      <br>
+  </div>
+ </body>
+</html>

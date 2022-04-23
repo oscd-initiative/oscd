@@ -1,0 +1,131 @@
+html {
+    font-size: 12px;
+    color: #e1f2f6;
+} 
+
+* {
+    box-sizing: border-box;
+    text-rendering: geometricPrecision
+} 
+
+body {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    background-color: #04020c;
+    margin: 0;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    word-wrap: break-word
+}
+
+h1, h2 {
+    line-height: 1.3em
+    color: #e1f2f6
+} 
+
+pre {
+    padding: 5px;
+    background-color: #FFFFFF;
+    overflow: auto
+}
+
+a {
+    cursor: pointer;
+    color: #e1f2f6;
+    text-decoration: none;
+    border-bottom: 1px solid #78bec7
+} 
+
+a:hover {
+    background-color: #78bec7;
+    color: #fff
+}
+
+.hack, .hack h1, .hack h2 {
+    font-size: 1rem;
+    font-style: normal;
+    color: #78bec7
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif
+} 
+
+.hack h1, .hack h2, .hack li, .hack ul {
+    font-size:13px;
+    float: none;
+    color: #78bec7;
+    margin: 0;
+    padding: 0
+} 
+
+.hack h1, .hack ul {
+    margin-top: 20px;
+    margin-bottom: 20px
+} 
+
+.hack h1:before {
+    content: "# "
+} 
+
+.hack h2 {
+    position: relative;
+    margin-bottom: 1.75rem
+} 
+
+.hack h2:before {
+    display: inline
+} 
+
+.hack h2:before {
+    content: "## "
+} 
+
+.hack li {
+    position: relative;
+    display: block;
+    padding-left: 20px
+} 
+
+.hack li:after {
+    position: absolute;
+    top: 0;
+    left: 0
+} 
+
+.hack table {
+  width:100%
+}
+
+.hack td {
+  padding: 10px;
+  border: 1px solid #78bec7;
+}
+
+.hack th {
+  border: 1px solid #78bec7;
+  padding: 10px;
+  text-align: left;
+}
+
+.hack ul > li:after {
+    content: "-"
+} 
+
+.container {
+    /*max-width: 43rem*/
+    max-width: 60rem
+} 
+
+.hack img {
+    width:auto;
+    height:auto;
+    max-width: 30rem;
+}
+
+.container, .container-fluid {
+    margin: 0 auto;
+    padding: 0 1rem
+} 
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
